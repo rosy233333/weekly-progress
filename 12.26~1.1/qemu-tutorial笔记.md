@@ -2,9 +2,20 @@
 
 时间：2024/1/1
 
+原文：[https://github.com/OS-F-4/qemu-tutorial/blob/master/qemu-tutorial.md](https://github.com/OS-F-4/qemu-tutorial/blob/master/qemu-tutorial.md)
+
 ## 编译
 
-还未编译通过，等通过了再来补充。
+一般在QEMU源码之外的文件夹进行编译。
+
+```bash
+$ mkdir qemu-build
+$ cd qemu-build
+$ ../qemu/configure --target-list="riscv64-softmmu"
+$ make -j
+```
+
+重新下载源码，也是解决编译错误的手段之一。如果文件损坏，或者之前的编译错误产生了不一致性，可以重新下载源码。
 
 ## 源代码概览
 
