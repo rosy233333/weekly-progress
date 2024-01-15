@@ -4,7 +4,7 @@
 
 原文：[https://github.com/OS-F-4/qemu-tutorial/blob/master/qemu-tutorial.md](https://github.com/OS-F-4/qemu-tutorial/blob/master/qemu-tutorial.md)
 
-## 编译
+## 编译运行
 
 一般在QEMU源码之外的文件夹进行编译。
 
@@ -13,6 +13,14 @@ $ mkdir qemu-build
 $ cd qemu-build
 $ ../qemu/configure --target-list="riscv64-softmmu"
 $ make -j
+```
+
+运行：
+
+```bash
+# qemu-build目录下
+$  ./qemu-system-riscv64 -machine virt # 运行
+$  ./qemu-system-riscv64 -h # 查看帮助
 ```
 
 重新下载源码，也是解决编译错误的手段之一。如果文件损坏，或者之前的编译错误产生了不一致性，可以重新下载源码。
