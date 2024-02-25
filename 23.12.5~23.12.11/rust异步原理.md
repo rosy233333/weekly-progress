@@ -63,6 +63,10 @@ async fn example(min_len: usize) -> String {
 
 编译器自动将代码转化为状态机
 
+使用`async`声明的函数或者代码块，不会返回值本身，而会返回`Future`。
+
+对`Future`调用`.await`，获取其值。
+
 注意对`await`和流程控制（`if`）的处理
 
 ![](..\图片\async-state-machine-basic.svg)
@@ -217,5 +221,5 @@ waker是一个由executor实现的特性。
 
 某个协程等待其它协程的结果，这一现象十分常见。
 
-通过waker，可以在被等待的协程执行完毕时，立即通知等待的协程，从而减少了主动poll的次数。
+`Executor`在调用`Future`的`poll`方法时，将自己的`waker`传入。如果协程在等待某些异步任务而返回`Pending`，`Waker`会注入这些异步任务中。一旦任务完成，其就会通过`Waker`通知`Executor`，使`Executor`知道再次poll这个协程可以成功推进。从而减少了主动poll的次数。
 
