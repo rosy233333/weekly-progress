@@ -51,7 +51,7 @@ struct `UdpSocket`，用于UDP信息的发送和接收。其可以“建立UDP�
 
 struct `SocketSetWrapper`，存储socket列表。`Socket`具有`poll_at`函数（怎么这个函数的参数也是`Context`啊……所以Rust的异步模型和这里的poll是有渊源的吗？），有Udp、Tcp、Dns等多种socket。
 
-struct `DeviceWrapper`，对设备的包装。具有`receive`和`transmit`两个方法，调用它们分别可以得到`AxNetRxToken`和`AxNetTxToken`。token在一个token-ring network中是唯一的，拿到token才可以发送/接收信息。
+struct `DeviceWrapper`，对设备的包装。具有`receive`和`transmit`两个方法，调用它们分别可以得到`AxNetRxToken`和`AxNetTxToken`。token在一个token-ring network中是唯一的，拿到token才可以调用设备发送/接收信息。
 
 struct `InterfaceWrapper`，对接口的包装，存储了名称、以太网地址、设备和接口。可以设置接口的IP地址和网关。可以使用接口、设备、socket三者调用`poll`方法。（显然不是异步编程的`poll`而是网络的`poll`，但目前还不知道是什么意思）（也不知道接口的意思）
 
