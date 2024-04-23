@@ -2,6 +2,14 @@
 
 时间：2024/4/22
 
+## 各个仓库的修改完成的commit
+
+操作系统`arceos-ats-intc`：[https://github.com/rosy233333/arceos-ats-intc/commit/b44e2db4cdaf19778a3e922fa95dbfcb4028e252](https://github.com/rosy233333/arceos-ats-intc/commit/b44e2db4cdaf19778a3e922fa95dbfcb4028e252)
+
+驱动`ats-intc`：[https://github.com/rosy233333/ats-intc/commit/d2742f6c9345ecb0983177b85f96bd928c7a0d84](https://github.com/rosy233333/ats-intc/commit/d2742f6c9345ecb0983177b85f96bd928c7a0d84)
+
+模拟器`qemu`：[https://github.com/rosy233333/qemu/commit/1b7901c7a330fcbb5ff432888932387fe5ddb9d3](https://github.com/rosy233333/qemu/commit/1b7901c7a330fcbb5ff432888932387fe5ddb9d3)
+
 ## bug描述
 
 在使用修改后的调度模块，在4核或以上核心数运行多任务（无论是多线程还是多协程）程序时，可能出现`Segmentation fault`。核心数越多、创建的任务数越多，出错概率越大。在创建16个线程的实验中，使用4核基本不会出错，5核可能出错，8核总是出错。
