@@ -48,8 +48,6 @@ tail latency：尾延迟，指并发系统在完成任务时，因为少数单�
 2. 使用Join-Bounded Shortest Queue（JBSQ）来接近单队列的表现。
 3. Concord dispatcher（用来将请求加入队列的线程）是work-conserving的，可以同时逼近单队列和精确抢占。
 
-。
-
     “Work-conserving” 是指系统或调度器在可行的情况下一直保持活跃，不让任何可执行的任务处于空闲状态。
 
 #### 性能测试
