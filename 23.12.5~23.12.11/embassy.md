@@ -8,7 +8,7 @@ Embassy是一个帮助你使用异步协程进行嵌入式开发，并且提供�
 
 ## 使用协程调用外设——协程和中断机制的配合
 
-具体见[Executor/interrupts](https://embassy.dev/book/dev/runtime.html#_interrupts)
+具体见[Executor/interrupts](https://embassy.dev/book/#_interrupts)
 
 ![](..\图片\embassy_irq.png)
 
