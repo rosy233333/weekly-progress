@@ -130,3 +130,53 @@ zfl说，可以把数据部分的定义全部放在vdso外部。
 ![alt text](265e9d21554d8fb1ee06c1e779b9287.png)
 
 ![alt text](f81f79985408981aee9c7a3defb2fc1.png)
+
+## 3.23更新
+
+按照zfl学长的建议，更换了vvar段和vdso段在链接脚本中的位置（位于percpu段之前），得到如下错误信息：
+
+![alt text](image.png)
+
+## 3.26更新
+
+读完《程序员的自我修养——链接、装载与库》后，尝试解读错误信息。
+
+此外，将MODE改为debug，方便查看更多调试信息。
+
+### 寻找问题
+
+出错的引用为`_svdso`、`_evdso`（modules/axhal/src/mem.rs中）、`vdso_start`、`vdso_end`（vdso/src/lib.rs中）。
+
+出错的重定位类型均为`R_RISCV_PCREL_HI20`。通过PC相对寻址32位范围内的地址时，先使用`auipc`指令加上立即数的高20位，再使用其它指令（例如`addi`）加上立即数的低12位。`R_RISCV_PCREL_HI20`类型的重定位即发生在`auipc`指令中，用于修改指令中的立即数。
+
+通过反汇编得知，在modules/axhal/src/mem.rs中，对所有链接脚本中提供的符号（即每个段的开始和结束）的寻址都使用了上述提到的“`auipc`+其它指令”的模式。但别的符号（包括vvar相关符号）的重定位都没有问题，只有vdso相关符号的重定位有问题。此外，.text段与vdso段的距离在32位以内，因此理论上该重定位应该不会超出范围。
+
+想通过反汇编获得相关重定位的计算过程（`S+A-P`），但未能成功。
+
+### 解决问题
+
+之前的尝试不算成功后，想到了考虑vdso相关符号与其它段相关符号的不同点。
+
+vdso段的声明是在内联汇编中：
+
+```asm
+.section vdso
+.globl vdso_start, vdso_end
+.balign 0x1000
+vdso_start:
+	.incbin "vdso/target/riscv64gc-unknown-linux-musl/release/libcops.so"
+	.balign 0x1000
+vdso_end:
+```
+
+而其它段要么由编译器自动分配，要么在Rust代码中使用`#[link_section(...)]`显式声明。
+
+因此考虑，是这段内联汇编带来了问题。
+
+首先觉得，因为这段内联汇编是通过`global_asm!()`直接插入到Rust代码中，因此觉得可能是由于`.section`改变了所在段，但在结束时没有将所在段改回来，因此影响到了Rust代码。
+
+因此，我尝试将`.section`伪代码改为`.section ... .previous`或者`.pushsection ... .popsection`从而在汇编代码结束时恢复所在段。但依然报错。
+
+对内联汇编注释后测试发现，只有将段设置伪代码注释掉才能解决错误，注释其它语句均没有用。因此，可能在内联汇编中使用段设置伪代码和Rust的编译流程产生了冲突，但目前还不知道更深层次的原因。
+
+因此，得出了解决方案：不在汇编代码中设置段，而是将vdso代码区域在Rust代码中定义、设置段和初始化。（目前还没来得及实施）
