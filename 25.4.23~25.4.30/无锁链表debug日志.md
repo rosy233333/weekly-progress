@@ -38,3 +38,9 @@ zfl学长反馈，在进行堆分配器测试时，依然出现了访存异常�
 该bug由于分配的空间的首地址未对齐引起（采用`[u8; 512]`分配空间），从而导致正常地址在转换后被错误地识别为带标记地地址。因此我将分配的空间改为了`[usize; 64]`，就解决了此bug。同时，还为`GetDataBase`接口增加了安全使用说明。
 
 对应的commit：[pilf_buddy_alloc:0a796f9](https://github.com/AsyncModules/pilf_buddy_alloc/commit/0a796f90f4442cb0b6b88fb749305c2e9b6bb842)、[pi_pointer:9f566a2](https://github.com/AsyncModules/pi_pointer/commit/9f566a2b166271e10f826c6aa5406b1abbf7c6da)
+
+## 访存异常问题2
+
+在进行堆分配器的性能测试时，仍出现了访存异常问题。
+
+已经明确了问题出现的原因，对问题的分析详见[此文档](https://github.com/AsyncModules/pilf_buddy_alloc/blob/main/doc/%E6%97%A0%E9%94%81%E5%88%97%E8%A1%A8%E5%BD%93%E5%89%8Dbug%E6%8F%8F%E8%BF%B0.md)。目前还未找到解决方案。
