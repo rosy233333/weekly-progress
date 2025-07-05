@@ -105,3 +105,156 @@ rump kernel需要处理的上下文包括进程/线程上下文，以及每个�
 rump kernel的虚拟内存支持由host提供。
 
 ### 3. Implementation
+
+基于的系统：NetBSD
+
+#### 3.1. Kernel Partitioning
+
+内核分层结构见2.1.2。
+
+困难：
+
+- 跨模块的编译期定义（`#ifdef`）
+- 模块间引用（函数/变量）
+- 属于多个模块的代码
+
+（总结起来，就是模块间的代码依赖）
+
+解决方式：
+
+- 代码移动
+- 函数指针
+- 弱符号
+
+##### 3.1.2. Providing Components
+
+Rump 内核组件作为常规系统构建的一部分进行编译，并作为库安装到 /usr/lib 中.
+
+#### 3.2. Running the Kernel in an Hosted Environment
+
+讨论如何在虚拟机中运行rump kernel。
+
+##### 3.2.1. C Symbol Namespaces
+
+##### 3.2.2. Privileged Instructions
+
+##### 3.2.3. The Hypercall Interface
+
+#### 3.3. Rump Kernel Entry and Exit
+
+在运行rump kernel前，为其提供进程/线程上下文和虚拟CPU上下文。
+
+##### 3.3.1. CPU Scheduling
+
+##### 3.3.2. Interrupts and Soft Interrupts
+
+#### 3.4. Virtual Memory Subsystem
+
+管理地址空间、管理内存地址到backing content的映射。
+
+rump kernel不需要MMU，没有页保护和页错误处理。
+
+##### 3.4.1. Page Remapping
+
+##### 3.4.2. Memory Allocators
+
+##### 3.4.3. Pagedaemon
+
+#### 3.5. Synchronization
+
+因为rump kernel自身不控制任务调度，因此遇到基于阻塞的同步原语时，使用两种方法处理：
+
+- 改为自旋等待
+- 通知host
+
+##### 3.5.1. Passive Serialization Techniques
+
+##### 3.5.2. Spinlocks on a Uniprocessor Rump Kernel
+
+#### 3.6. Application Interfaces to the Rump Kernel
+
+rump kernel提供的API：
+
+- 为应用程序调用rump kernel服务提供C接口
+- 封装了进入和退出rump kernel的过程
+
+有以下几种接口类型：
+
+##### 3.6.1. System Calls
+
+##### 3.6.2. vnode Interface
+
+##### 3.6.3. Interfaces Specific to Rump Kernels
+
+#### 3.7. Rump Kernel Root File System
+
+不将rump kernel与实际的持久存储相关联。
+
+##### 3.7.1. Extra-Terrestrial File System
+
+#### 3.8. Attaching Components
+
+加载rump kernel组件与一般内核的加载的异同。
+
+##### 3.8.1. Kernel Modules
+
+##### 3.8.2. Modules: Loading and Linking
+
+##### 3.8.3. Modules: Supporting Standard Binaries
+
+##### 3.8.4. Rump Component Init Routines
+
+#### 3.9. I/O Backends
+
+##### 3.9.1. Networking
+
+##### 3.9.2. Disk Driver
+
+#### 3.10. Hardware Device Drivers: A Case of USB
+
+用于证明可在用户空间中开发内核硬件驱动。
+
+##### 3.10.1. Structure of USB
+
+##### 3.10.2. Defining Device Relations with Config
+
+##### 3.10.3. DMA and USB
+
+##### 3.10.4. USB Hubs
+
+#### 3.11. Microkernel Servers: Case Study with File Servers
+
+使用rump kernel实现微内核风格的服务器
+
+##### 3.11.1. Mount Utilities and File Servers
+
+##### 3.11.2. Requests: The p2k Library
+
+##### 3.11.3. Unmounting
+
+#### 3.12. Remote Clients
+
+![alt text](image-3.png)
+
+##### 3.12.1. Client-Kernel Locators
+
+##### 3.12.2. The Client
+
+##### 3.12.3. The Server
+
+##### 3.12.4. Communication Protocol
+
+##### 3.12.5. Of Processes and Inheritance
+
+##### 3.12.6. System Call Hijacking
+
+##### 3.12.7. A Tale of Two Syscalls: fork() and execve()
+
+##### 3.12.8. Performance
+
+#### 3.13 Summary
+
+这些工作引入的好处（它们对原有的宏内核设计也有效）：
+
+- 为配置文件引入了iocpnf和pseudo-root关键字，简化了从设备驱动程序创建内核模块的过程
+- 添加了禁用内置内核模块的能力
