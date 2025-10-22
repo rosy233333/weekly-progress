@@ -120,6 +120,8 @@ worker协程负责发起IPC请求，而dispatcher协程则专门处理响应消�
 
 ### 4.2. 异步IPC
 
+![alt text](image-3.png)
+
 原文讲得很清楚，见原文。
 
 ### 4.3. 异步系统调用
