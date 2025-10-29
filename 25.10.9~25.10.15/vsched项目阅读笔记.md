@@ -47,7 +47,7 @@ user_test中定义的`task_ext`，字段和功能如下：
 
 协程 -> 线程：
 
-`user_test::vsched::yield_now_f` -> `YieldFuture::new().await` -> `user_test::vsched::YieldFuture::poll`: 先调用`vsched_apis::yield_f`仅维护就绪队列不执行实际切换，再返回`poll::Pending`至`user_test::task::coroutine_schedule` -> `user_test::task::coroutine_schedule`: 先通过`vsched_apis::current`获取下一个要执行的任务，再通过`(*prev_ctx_ptr).switch_to(&*next_ctx_ptr)`执行上下文切换。
+`user_test::vsched::yield_now_f` -> `YieldFuture::new().await` -> `user_test::vsched::YieldFuture::poll`: 先调用`vsched_apis::yield_f`仅维护就绪队列和任务状态不执行实际切换，再返回`poll::Pending`至`user_test::task::coroutine_schedule` -> `user_test::task::coroutine_schedule`: 先通过`vsched_apis::current`获取下一个要执行的任务，再通过`(*prev_ctx_ptr).switch_to(&*next_ctx_ptr)`执行上下文切换。
 
 协程 -> 协程：
 
@@ -91,4 +91,5 @@ vsched代码的重构而无法运行。因此阅读vsched代码，从而修改us
 - 协程相关操作（如让出、阻塞）对应的`Future`
 - 协程的`alloc_stack`和`coroutine_schedule`函数
 - 适用于线程和协程的阻塞队列
-- 线程和协程的join操作
+- 线程和协程的join操作（如果是使用相同辅助库的任务，就可以互相join）
+- 基于阻塞的互斥锁？为了使用户态的临界区对内核态有效，在抢占时需要实现关中断机制。

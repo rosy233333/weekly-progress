@@ -60,3 +60,55 @@ assert!(
 为了更好地定位问题，在user_test中使用`env_logger`增加了对log调试输出的支持。
 
 同时，在`vsched_api`调用`vsched`中的函数时，加入了调试输出，输出调用的函数和地址。该调试输出等级为trace。
+
+## task相关内容重构阶段
+
+重构已有的任务调度模块，将原本位于`user_test`中的任务调度功能代码分离出来。
+
+### 创建task_management库
+
+创建了task_management库，作为分离出的任务调度功能代码的存放位置。task_management库与base_task库的关系如下：
+
+`base_task`：存放`TaskInner`及其配套数据结构（`TaskStack`、`TaskId`、`TaskState`）的定义和方法（不包含`TaskInnerExt`）。`base_task`被`vsched`库直接依赖，为vdso共享库的一部分。
+
+`task_management`：存放`TaskInnerExt`、`WaitQueue`和`Mutex`的定义（是否要在该库中支持互斥锁还在考虑）、存放user_test原有代码中除了映射vdso以外的内容（包括协程调度、任务的阻塞和退出、join、gc任务、线程的task_entry定义等）。其位于主编译单元中，依赖vdso共享库，对主编译单元提供任务调度功能。
+
+![](../25.10.23~25.10.29/vsched重构后项目结构.png)
+
+### 移动`TaskInnerExt`相关代码
+
+将`TaskInnerExt`相关代码从`base_task`中移到`task_management`中。
+
+原本兼容有无`TaskInnerExt`的`TaskInner`的方式为：使用`feature = "alloc"`，区分vdso编译单元内外的环境，定义和使用两种不同的`TaskInner`。由于因为两种`TaskInner`且除`ext`以外在内存表示上相同，因此两者的指针可以直接互相转化，vdso内外也可以通过指针传递任务结构。
+
+移动`TaskInnerExt`后，我在task_management库中重定义了`TaskInner`：
+
+```Rust
+#[repr(C)]
+pub struct TaskInner {
+    inner: base_task::TaskInner,
+    ext: TaskInnerExt,
+}
+```
+
+此处定义的`TaskInner`（的inner部分）在内存表示上也和`base_task::TaskInner`相同，因此指针可相互兼容。但在Rust类型系统中视为两种不同的类型，需要显式转化。因此实现了转化指针的`base_to_ext`和`ext_to_base`函数。（内部调用`core::mem::transmute`实现）
+
+这样修改的意图是让`base_task`中仅存储vdso所需的内容，因此不再需要通过`feature = "alloc"`区分“对vdso使用”和“对外部使用”的内容。但实际修改时发现，某些数据结构（例如`TaskInner`和`TaskStack`）需要在vdso中使用，但需要在外部库中创建，且这些数据结构的创建涉及alloc操作。因为不想将数据结构的定义和初始化放在不同的库中，因此在这些初始化代码还是留在了`base_task`库中，保留了`feature = "alloc"`。
+
+### 互斥锁实现？
+
+实现内核态和用户态共享的锁的难点在于，同时满足以下三个条件会导致死锁：
+
+1. 用户态代码占用资源后，可能被内核态抢占
+2. 内核态抢占的代码使用到了用户态代码占用的资源
+3. 内核态抢占的代码执行完成前，无法回到被抢占的用户态代码。
+
+在实现了内核态和用户态统一调度后，满足条件3的内核态代码只能是内核态的中断处理代码（因为其它内核态代码与用户态在同一个调度器上运行，之间没有类似同步系统调用的依赖关系）
+
+必须在内核态中断处理代码中完成的功能（无法放在中断第二段完成）里，需要用到锁的功能只有抢占过程中涉及的调度机制（？）。
+
+因此，虽然在用户态无法关中断，但如果能在调度机制中实现用户态的禁止抢占，也能达到防止以上死锁出现的效果。
+
+### 阻塞队列实现
+
+### 协程调度实现
