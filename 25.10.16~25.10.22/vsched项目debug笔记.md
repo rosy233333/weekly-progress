@@ -112,3 +112,89 @@ pub struct TaskInner {
 ### 阻塞队列实现
 
 ### 协程调度实现
+
+### 去除对config的依赖，改为使用接口？
+
+### 尝试移除gc_task？
+
+因为目前任务使用`Arc`维护引用计数和管理释放，因此似乎不需要`gc_task`。
+
+目前，任务引用计数增长的情况只有`join`时：
+
+任务A `join` 任务B，由于`join`的API要求，任务A需要持有一个任务B的引用。此时，任务A只有一个引用，它在运行过程中从就绪队列移动到当前任务，再移动到任务B的等待队列。任务B有两个引用，一个被任务A持有，一个从就绪队列中移动到当前任务。任务B结束时，先唤醒任务A，再直接释放自己的引用。由于任务A还持有任务B的引用，因此任务B不会被立刻释放，只会在任务A完成`join`并释放任务B的引用后，任务B才会被释放。
+
+在实际编码时发现，一个任务切换到下一任务后，下一任务还需要设置前一任务的`on_cpu`字段。因此在下一任务修改前一任务的字段后，判断其状态是否为`Exited`，是则释放。
+
+### wait问题
+
+执行wait测例后，程序在打印如下输出后卡死：
+
+```
+RUST_LOG=debug qemu-riscv64 -D qemu.log -d in_asm,int,mmu,pcall,cpu_reset,page,guest_errors /home/rosy/桌面/vsched/target/riscv64gc-unknown-linux-musl/release/wait
+[2025-10-31T06:23:02Z INFO  user_test::vsched] vsched_map base: [0x4000807000, 0x4000849000]
+[2025-10-31T06:23:02Z INFO  elf_parser] Base addr for the elf: 0x4000809000
+[2025-10-31T06:23:02Z INFO  elf_parser::arch::riscv] Base addr for the elf: 0x4000809000
+[2025-10-31T06:23:02Z INFO  elf_parser::arch::riscv] Relocating .rela.dyn
+[2025-10-31T06:23:02Z INFO  elf_parser::arch::riscv] Relocating done
+[2025-10-31T06:23:02Z DEBUG user_test::vsched] VA:0x4000809000, 0x14b0, MappingFlags(READ | EXECUTE | USER)
+[2025-10-31T06:23:02Z DEBUG user_test::vsched] VA:0x400080b000, 0x228, MappingFlags(READ | USER)
+[2025-10-31T06:23:02Z DEBUG user_test::vsched] VA:0x400080c000, 0xf8, MappingFlags(READ | WRITE | USER)
+[2025-10-31T06:23:02Z WARN  user_test::vsched] Segment with size 0 found, skipping: VA:0x4000809000, 0x0, MappingFlags(READ | WRITE | USER)
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b023, dst: 0x400080c000, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b023, dst: 0x400080c018, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b023, dst: 0x400080c030, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b023, dst: 0x400080c048, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b023, dst: 0x400080c060, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b037, dst: 0x400080c078, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b037, dst: 0x400080c090, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b037, dst: 0x400080c0a8, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x400080b066, dst: 0x400080c0c0, count: 8
+[2025-10-31T06:23:02Z INFO  user_test::vsched] Relocate: src: 0x40008096f0, dst: 0x400080c0e8, count: 8
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] spawn: 4000809bfe
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] migrate_entry: 400080994a
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] yield_f: 4000809e94
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] set_priority: 4000809bea
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] yield_now: 400080a072
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] resched: 4000809ad0
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] preempt_current: 40008099c8
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] init_vsched: 4000809892
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] current: 4000809874
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] clear_prev_task_on_cpu: 4000809852
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] task_tick: 4000809d86
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] switch_to: 4000809ccc
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] resched_f: 4000809af2
+[2025-10-31T06:23:02Z DEBUG vsched_apis::apis] unblock_task: 4000809d9a
+[2025-10-31T06:23:02Z INFO  user_test::vsched] vsched mapped successfully
+[2025-10-31T06:23:02Z DEBUG task_management::task_inner_ext] new task: Task(2, "idle")
+[2025-10-31T06:23:02Z DEBUG task_management::task_inner_ext] new task: Task(3, "gc")
+[2025-10-31T06:23:02Z DEBUG task_management::task_inner_ext] new task: Task(4, "task__1")
+[2025-10-31T06:23:02Z DEBUG task_management::task_inner_ext] new task: Task(5, "task__2")
+[2025-10-31T06:23:02Z DEBUG task_management::sched] task blocked "gc"
+wait task start
+[2025-10-31T06:23:02Z DEBUG task_management::sched] task blocked "task__2"
+into spawned task inner
+[2025-10-31T06:23:02Z DEBUG task_management::sched] "task__1" is exited
+[2025-10-31T06:23:02Z DEBUG task_management::wait_queue] unblock task "task__2", is on cpu false
+[2025-10-31T06:23:02Z DEBUG task_management::wait_queue] unblock task "gc", is on cpu false
+back to idle task
+[2025-10-31T06:23:02Z DEBUG task_management::sched] task blocked "main"
+wait task ok
+[2025-10-31T06:23:02Z DEBUG task_management::sched] "task__2" is exited
+[2025-10-31T06:23:02Z DEBUG task_management::wait_queue] unblock task "main", is on cpu true
+```
+
+根据打印输出，推测是main task在阻塞时未设置`on_cpu`字段为false，导致无法正常唤醒。
+
+对推测的证明：
+
+#### 1. `on_cpu`字段一直为true，会导致无法正常唤醒
+
+任务唤醒的调用链：`wait_queue::unblock_one_task` -> `vsched::unblock_task` -> `vsched::put_task_with_state`，而`put_task_with_state`函数中会自旋直到要唤醒的函数的`on_cpu`字段变为false。
+
+#### 2. main task在阻塞时未设置`on_cpu`字段为false
+
+所有代码中，能够设置`on_cpu`字段为false的只有`vsched::clear_prev_task_on_cpu`函数。该函数未被`vsched`内部的其它函数调用，而应由外部代码在任务切换完成后，在切换到新任务后立刻调用。
+
+如果下一任务为协程，则切换到新任务后会进入`coroutine_schedule`函数。该函数中包含了每次切换后对`clear_prev_task_on_cpu`的调用。但如果下一任务为线程，则会进入`task_entry`函数，该函数开头也调用了`clear_prev_task_on_cpu`函数。但是，线程的恢复是从保存的上下文开始，而非每次都从`task_entry`开头开始。这导致如果切换到的线程曾运行过，则不会再调用`clear_prev_task_on_cpu`函数。
+
+解决方案：在线程的每一个恢复点调用`clear_prev_task_on_cpu`函数。这些恢复点包括`vsched_apis::resched`和`vsched_apis::yield_now`函数的后一句。

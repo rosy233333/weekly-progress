@@ -57,7 +57,7 @@ user_test中定义的`task_ext`，字段和功能如下：
 
 线程的阻塞：
 
-`user_test::wait_queue::WaitQueue::wait` -> `user_test::vsched::blocked_resched`: 先将任务加入阻塞队列，再调用`vsched_apis::resched` -> `vsched::api::ressched` -> `vsched::sched::resched`，之后同任务切换过程
+`user_test::wait_queue::WaitQueue::wait` -> `user_test::vsched::blocked_resched`: 先将任务加入阻塞队列，再调用`vsched_apis::resched` -> `vsched::api::resched` -> `vsched::sched::resched`，之后同任务切换过程
 
 协程的阻塞：
 
