@@ -51,6 +51,16 @@
 
 #### 接口
 
+`SQE`：
+
+```Rust
+struct IPCItem<T> {
+  sender_id: usize,
+  message_type: usize,
+  data: T
+}
+```
+
 接收队列的接口：
 
 - **`get_sqe(receiver_id: usize) -> Result<SQERef>`** ：从共享数据的接收队列中获取一个`SQE`供用户填写。填写完成、释放引用后自动视为提交，不需要额外的提交操作。

@@ -109,10 +109,6 @@ pub struct TaskInner {
 
 因此，虽然在用户态无法关中断，但如果能在调度机制中实现用户态的禁止抢占，也能达到防止以上死锁出现的效果。
 
-### 阻塞队列实现
-
-### 协程调度实现
-
 ### 去除对config的依赖，改为使用接口？
 
 ### 尝试移除gc_task？
@@ -198,3 +194,22 @@ wait task ok
 如果下一任务为协程，则切换到新任务后会进入`coroutine_schedule`函数。该函数中包含了每次切换后对`clear_prev_task_on_cpu`的调用。但如果下一任务为线程，则会进入`task_entry`函数，该函数开头也调用了`clear_prev_task_on_cpu`函数。但是，线程的恢复是从保存的上下文开始，而非每次都从`task_entry`开头开始。这导致如果切换到的线程曾运行过，则不会再调用`clear_prev_task_on_cpu`函数。
 
 解决方案：在线程的每一个恢复点调用`clear_prev_task_on_cpu`函数。这些恢复点包括`vsched_apis::resched`和`vsched_apis::yield_now`函数的后一句。
+
+## 使用vdso_crate_template框架代码阶段
+
+### BuildConfig中的相对路径
+
+这次因为路径问题踩了一些坑，学到的内容总结如下：
+
+`BuildConfig`中传入的相对路径，因为其最终会使用`std::fs::canonicalize`解析为绝对路径，因此其相对路径为相对程序的工作路径。其包含两种情况：
+
+- 若`build_vdso`函数在主程序中调用，则相对路径相对于调用主程序的命令行。
+- 若`build_vdso`函数在`build.rs`中调用，则相对路径相对于`build.rs`文件。
+
+### 设定结构体的对齐
+
+使用`#[repr(align(n))]`指定对齐。
+
+其可和`#[repr(C)]`同时使用，写作`#[repr(C, align(n))]`
+
+注意：此处的n只能使用10进制写法，不能使用16进制写法。开发过程中，遇到过将n写成16进制导致设置的对齐不生效导致的bug。

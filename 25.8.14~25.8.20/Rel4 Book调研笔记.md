@@ -116,4 +116,4 @@ task.tcb.tcb_configure(
 
 系统调用到IPC的转化：在用户程序编译后或加载时，将其中的系统调用指令全部修改为一条错误指令`0xdeadbeef`，使用户程序执行到这条指令时，触发异常，由rel4内核将其转发到用户程序的fault_endpoint，也就是kernel-thread处理。因此，kernel-thread可以从endpoint上接收系统调用请求并处理。
 
-kernel-thread对同步和异步任务的处理：kernel-thread创建了系统调用处理协程后，先运行executor直到没有协程就绪，再进入对endpoint的同步等待。因此，基本上不会出现同步阻塞导致异步任务无法执行的情况（只有一种情况：在同步等待endpoint时，异步任务解除阻塞，此时是否无法立刻执行接触阻塞的异步任务？）
+kernel-thread对同步和异步任务的处理：kernel-thread创建了系统调用处理协程后，先运行executor直到没有协程就绪，再进入对endpoint的同步等待。因此，基本上不会出现同步阻塞导致异步任务无法执行的情况（只有一种情况：在同步等待endpoint时，异步任务解除阻塞，此时是否无法立刻执行解除阻塞的异步任务？）
