@@ -213,3 +213,26 @@ wait task ok
 其可和`#[repr(C)]`同时使用，写作`#[repr(C, align(n))]`
 
 注意：此处的n只能使用10进制写法，不能使用16进制写法。开发过程中，遇到过将n写成16进制导致设置的对齐不生效导致的bug。
+
+### 演示时的错误
+
+在演示时，原本可正常运行的测例忽然全都无法运行，有的卡死，有的报段错误。
+
+经过排查后发现了原因：当编译的环境变量（`SMP`和`RQ_CAP`）改变时，共享数据结构的内存结构也会改变，因此vdso库需要重新编译。但当前的构建脚本并不会重新运行。因此，在`user_test/build.rs`中增加了以下内容：
+
+```Rust
+println!("cargo::rerun-if-env-changed=SMP");
+println!("cargo::rerun-if-env-changed=RQ_CAP");
+```
+
+在这之后，当环境变量改变后，**第一次编译仍会出错，而第二次编译则可以正常运行**。推测原因是`api`库（`libvsched`）也由编译流程生成，而第一次编译使用了旧版的api库，第二次编译才会使用（第一次编译使用的）新版api库。
+
+在进一步调查该问题的起因。考虑是否因为在依赖链`task_management <- user_test`中，两个库都依赖了`libvsched`，而`libvsched`的重新编译是在`user_test`中触发的，导致`task_management`依赖的`libvsched`为旧版？
+
+将`libvsched`的重新编译移到`task_management/build.rs`中后发现，仍会出现问题。分析编译输出发现，`libvsched`、`task_management`、`user_test`三个crate的编译顺序并不固定，`libvsched`可能在`task_management`之前编译。
+
+想尝试在`build.rs`中手动编译链接`libvsched`库，但未能正常运行。同时发现，由于上文提到的编译顺序不固定的问题，即使是手动编译链接，也可能出现`task_management`和`user_test`链接的版本不一致的问题。
+
+因此，如果`libvsched`仍在`build.rs`中编译，则该问题无法完全解决。而若生成单独的编译脚本（如`Makefile`），则会增加使用框架库的复杂性。
+
+目前的解决方案是，在`Makefile`中运行用户态测试时，使其编译两遍再运行。之后可以考虑是否有其它更好的解决方案。
