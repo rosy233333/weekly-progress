@@ -20,6 +20,8 @@ Linux提供的IPC机制：Futex（快速用户态互斥锁）
 
 [Linux 进程间通信（IPC）总结](https://www.cnblogs.com/huansky/p/13170125.html)
 
+[Futex介绍](https://1037827920.github.io/2025/01/25/Linux-Futex%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)
+
 本文的工作：通过专业硬件辅助Linux调度，并配合Nolte et al. 实现的IPC唤醒offload机制，HW-FUTEX，从而改进Linux中阻塞式IPC的性能。
 
 ## 2 Background
