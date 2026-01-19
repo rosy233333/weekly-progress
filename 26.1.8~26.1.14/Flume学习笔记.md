@@ -24,6 +24,6 @@ Apache Flume 是一个分布式、高可靠、高可用的用来收集、聚合�
 
 ## source和sink与Java任务的关系
 
-通过[`SourceRunner`](https://github.com/apache/logging-flume/blob/trunk/flume-ng-core/src/main/java/org/apache/flume/SourceRunner.java#L31)驱动`source`。根据`source`的类型，`SourceRunner`分为两种，可轮询的（`PollableSourceRunner`），以及事件驱动的（`EventDrivenSourceRunner`）。`PollableSourceRunner`直接创建一个线程来轮询`source`。`EventDrivenSourceRunner`似乎未使用单独的线程，其内部机制还需进一步研究。
+通过[`SourceRunner`](https://github.com/apache/logging-flume/blob/trunk/flume-ng-core/src/main/java/org/apache/flume/SourceRunner.java#L31)驱动`source`。根据`source`的类型，`SourceRunner`分为两种，可轮询的（`PollableSourceRunner`），以及事件驱动的（`EventDrivenSourceRunner`）。`PollableSourceRunner`直接创建一个线程来轮询`source`。`EventDrivenSourceRunner`则不创建额外的线程，而是将`getChannelProcessor().processEvent()`或`getChannelProcessor().processEventBatch()`（将`event`加入`channel`的操作）作为回调函数传入`Source`中，使`Source`在处理流程中调用。
 
 通过[`SinkRunner`](https://github.com/apache/logging-flume/blob/ff739dbe659ec5fa3fa92dcf2e4339c115673e7c/flume-ng-core/src/main/java/org/apache/flume/SinkRunner.java)驱动所有的`sink`。其内部使用`PollingRunner`，创建线程来轮询这些`sink`。
