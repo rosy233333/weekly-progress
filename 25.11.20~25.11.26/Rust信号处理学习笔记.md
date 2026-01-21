@@ -8,7 +8,7 @@
 
 ### 信号安全的函数
 
-信号处理函数对于用户态代码来说与中断处理函数对于内核态代码来说相似，都是会任意地打断正常执行流并插入执行的代码。因此，需要考虑它们访问全局数据时的同步问题，且需要让处理函数自身可重入。（[什么是可重入的（Reentrant）的函数?](https://blog.csdn.net/qq_43689451/article/details/145320207)）
+信号处理函数对于用户态代码来说与中断处理函数对于内核态代码来说相似，都是会任意地打断正常执行流并插入执行的代码。因此，需要考虑它们访问全局数据时的同步问题，且需要让处理函数自身可重入。（[linux可重入、异步信号安全和线程安全](https://www.cnblogs.com/alantu2018/p/8464029.html)）
 
 Linux提出了异步信号安全（async-signal-safe）的概念，要求信号处理函数满足以下两条要求之一：
 
@@ -58,7 +58,7 @@ impl<E: Exfiltrator> Stream for SignalsInfo<E> {
 
 关键步骤为调用内部的[`poll_signal`](https://docs.rs/signal-hook/latest/src/signal_hook/iterator/backend.rs.html#451-473)函数，并将自身的[`has_signals`](https://docs.rs/crate/signal-hook-tokio/latest/source/src/lib.rs#134-142)函数作为参数传入。
 
-`poll_signal`函数的功能为：在已通过管道传递信号信息的情况下，通过传入的回调函数读取管道的读端，并将读取到的信号信息存入内部的迭代器中。
+`poll_signal`函数的功能为：在已通过管道（pipe）传递信号信息的情况下，通过传入的回调函数读取管道的读端，并将读取到的信号信息存入内部的迭代器中。
 
 而适配器库传入的`has_signals`函数，则通过调用各个异步运行时的异步读接口，达到读取管道的效果。
 
