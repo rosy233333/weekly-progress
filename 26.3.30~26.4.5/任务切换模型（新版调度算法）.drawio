@@ -1,0 +1,780 @@
+<mxfile host="65bd71144e" scale="2" border="10">
+    <diagram id="t8-jY1y_tRn9Pswik4kB" name="第 1 页">
+        <mxGraphModel dx="758" dy="1918" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="421" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="540" y="600" width="320" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="423" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="680" width="320" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="419" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="900" y="600" width="380" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="410" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="1240" width="380" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="407" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="450" y="1240" width="420" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="272" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="380" width="240" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="890" y="80" width="160" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="160" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="540" y="380" width="280" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="-160" width="320" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="163" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="保存trap上下文" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="20" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="4" target="2" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="433" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="4" target="389">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="30" y="-60"/>
+                            <mxPoint x="30" y="660"/>
+                            <mxPoint x="260" y="660"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;是否是特定的&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;系统调用(1)&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="-100" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="10" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="426" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="10" target="350">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;当前任务&lt;/font&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;放回调度器&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="520" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="12" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;html=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="428" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="780" y="480" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="620" y="570"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;当前任务状态&lt;/font&gt;&lt;div style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;是否&lt;/font&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;为&lt;/font&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); background-color: transparent; color: rgb(0, 0, 0);&quot;&gt;就绪&lt;/font&gt;&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="400" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;(1) 从用户态调度器陷入内核时，使用一个特定的系统调用号，内核入口识别到这个系统调用后，就会跳过上下文保存和任务调度过程。&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;(2) 我们认为主动切换的任务一定设置了状态为就绪、阻塞或停止，因此仍为运行状态的任务一定是被动切换的。&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;(3)&lt;/font&gt;&lt;span style=&quot;color: rgb(0, 0, 0); text-align: center; background-color: transparent;&quot;&gt;需要跨特权级的切换会两次进入调度代码。在图中将只有第二次进入调度器时才会经过的流程用黄色箭头表示。&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0); text-align: center; background-color: transparent;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;(4)判断进入的特权级，判断是否切换栈的过程应该属于上下文保存的一部分。此处为了强调栈管理机制，因此单独拿出来说明。&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;font color=&quot;#000000&quot;&gt;(5) 被中断任务的状态改变、放回调度器等过程在trap处理任务内部实现。&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="1720" width="340" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="328" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="20" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="20" value="更新当前最高优先级" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="620" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="42" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="238" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="42" target="235" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="是线程或协程" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="1259.5" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="切换特权级&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;返回线程内部&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="1620" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="44" target="74" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="为用户态调度器&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;分配栈&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="1340.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="1240" width="380" height="360" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="71" target="72" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="保存线程上下文" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="220" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="72" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="72" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;以非空栈进入调度器&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="300" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="418" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="74" target="84">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="730" y="1680"/>
+                            <mxPoint x="1300" y="1680"/>
+                            <mxPoint x="1300" y="1220"/>
+                            <mxPoint x="980" y="1220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;切换特权级&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;以空栈返回&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;用户态调度器&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="1620.25" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="188" target="82" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;运行协程&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;调用poll&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="1579" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="195" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="84" target="186" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="是线程或协程" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="1259.5" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="191" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="86" target="190" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="回收调度器栈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="1499" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="93" target="128" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="从poll函数中返回" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;中断/异常/&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;ecall&lt;/span&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;入口&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="-150" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;线程主动让权/&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;线程异步系统调用&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="170" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;协程主动让权/&lt;/font&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;&lt;font style=&quot;scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251); color: rgb(0, 0, 0);&quot;&gt;协程异步系统调用&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="900" y="90" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="上一任务放回调度器" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="390" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" value="用户态运行任务" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="1250" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="是" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="-110" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="否" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="274" y="-20" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="" style="endArrow=classic;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="488" y="1560.5" as="sourcePoint"/>
+                        <mxPoint x="528" y="1560.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="178" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="128" target="177" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;根据返回值修改&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;任务状态&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="220" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="否" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="410" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="是" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="480" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="线程" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="1339.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="151" value="协程" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="1268.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" value="线程" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="1269.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="协程" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="970" y="1339.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" value="步骤1：执行流保存" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1520" y="220" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="159" value="步骤2：特权级与地址空间切换、任务调度&lt;div&gt;（例外：如果在内核态运行用户态任务，则特权级切换延后到步骤3进行，这主要是为了使内核运行用户线程时可以同时恢复上下文和切换地址空间。）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1520" y="650" width="110" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="步骤3：执行流恢复&lt;div&gt;（例外：如果在内核态运行用户态任务，则特权级切换在本步骤进行）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1530" y="1370" width="110" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="306" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="161" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="290" y="350"/>
+                            <mxPoint x="620" y="350"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="161" value="以空栈进入调度器" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="300" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="163" target="161" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="304" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="163" target="167" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="是否是外部中断" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="180" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="265" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="167" target="247" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="以空栈进入trap处理" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="300" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="179" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="177" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="177" value="以空栈进入调度器" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="300" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="181" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="84" target="180" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="980" y="1339.5" as="sourcePoint"/>
+                        <mxPoint x="980" y="1619.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="196" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="180" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="980" y="1579.5" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1060" y="1420.5"/>
+                            <mxPoint x="1060" y="1559.5"/>
+                            <mxPoint x="981" y="1559.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="180" value="调度器使用的栈类型" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="1380" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="184" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="186" target="86" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="197" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="186" target="190" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1220" y="1420.5"/>
+                            <mxPoint x="1220" y="1559.5"/>
+                            <mxPoint x="1140" y="1559.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="186" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器使用的栈类型&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="1380" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="189" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="180" target="188" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="980" y="1460" as="sourcePoint"/>
+                        <mxPoint x="980" y="1630" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="188" value="切换到空栈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="1499" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;运行线程&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;上下文恢复，&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;包括切换栈&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="1579" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="198" value="非空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="1459.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="200" value="非空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1220" y="1460" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="201" value="空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="1460" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="202" value="空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="1459.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="210" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="225" target="211" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="211" value="&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;运行协程&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;调用poll&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="1579" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="212" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="213" target="223" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="213" value="是线程或协程" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="1259.5" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="214" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="215" target="226" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="215" value="回收调度器栈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="1499" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="线程" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="1269.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="217" value="协程" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="1339.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="218" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="213" target="220" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="1339.5" as="sourcePoint"/>
+                        <mxPoint x="130" y="1619.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="219" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="220" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="1579.5" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="210" y="1420.5"/>
+                            <mxPoint x="210" y="1559.5"/>
+                            <mxPoint x="131" y="1559.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="220" value="调度器使用的栈类型" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="1380" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="221" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="223" target="215" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="222" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="223" target="226" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="370" y="1420.5"/>
+                            <mxPoint x="370" y="1559.5"/>
+                            <mxPoint x="290" y="1559.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="223" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器使用的栈类型&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="1380" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="224" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="220" target="225" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="1460" as="sourcePoint"/>
+                        <mxPoint x="130" y="1630" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="225" value="切换到空栈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="1499" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;运行线程&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;上下文恢复，&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;包括切换栈&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="1579" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="227" value="非空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="1459.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" value="非空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="1460" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" value="空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="1460" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="230" value="空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="1459.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="232" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="530" y="1619.75" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="232" value="回收调度器栈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="1539.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="233" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="235" target="232" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="234" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="235" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="610" y="1461"/>
+                            <mxPoint x="610" y="1600"/>
+                            <mxPoint x="530" y="1600"/>
+                        </Array>
+                        <mxPoint x="530" y="1619.75" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="235" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器使用的栈类型&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="1420.5" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="236" value="非空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="1500.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="237" value="空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="1500.5" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="240" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="241" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="730" y="1620.25" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="241" value="回收调度器栈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="1540" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="242" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="244" target="241" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="243" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="244" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="810" y="1461.5"/>
+                            <mxPoint x="810" y="1600.5"/>
+                            <mxPoint x="730" y="1600.5"/>
+                        </Array>
+                        <mxPoint x="730" y="1620.25" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="244" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器使用的栈类型&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="1421" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="245" value="非空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="810" y="1501" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="246" value="空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="1501" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="274" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="247" target="270" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="247" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;获取trap处理任务&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;（唤醒或创建）&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="400" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="268" value="切换到内核栈" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="100" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="275" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="270" target="271" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="270" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;设置当前任务变量&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;为&lt;/font&gt;&lt;span style=&quot;color: rgb(0, 0, 0); background-color: transparent;&quot;&gt;trap处理任务&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="480" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="425" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="271">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="1259.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="271" value="向trap处理任务传入&lt;div&gt;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;原任务和trap参数(5)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="560" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="273" value="&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;（用户态或内核态）&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;trap处理&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="390" width="70" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="307" value="是" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="260" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="308" value="否" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="190" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="309" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="380" y="-10" width="320" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="310" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="311" target="320" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="311" value="保存trap上下文" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="20" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="314" value="&lt;div&gt;&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;用户态中断入口&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="390" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="326" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="317" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="317" value="以空栈进入调度器" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="300" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="318" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="320" target="317" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="319" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="320" target="321" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="320" value="是否是外部中断" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="180" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="325" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="321" edge="1" target="247">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="300" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="321" value="以空栈进入trap处理" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="300" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="322" value="切换栈" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="100" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="323" value="是" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="260" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="324" value="否" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="190" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="385" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="333" target="345">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="386" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="434" target="382">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="333" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;比较&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;当前最高优先级与&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;全局最高&lt;span style=&quot;background-color: transparent;&quot;&gt;优先级&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="560" y="700" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="387" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="345" target="379">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="345" value="更新当前调度器变量" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="780" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="349" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="350" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="980" y="700" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="350" value="更新当前最高优先级" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="620" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="383" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="352" target="363">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="384" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="352" target="381">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="352" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;比较&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;当前最高优先级与&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;全局最高&lt;span style=&quot;background-color: transparent;&quot;&gt;优先级&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="700" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="430" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="1" source="353" target="4">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1140" y="1210"/>
+                            <mxPoint x="1300" y="1210"/>
+                            <mxPoint x="1300" y="-180"/>
+                            <mxPoint x="290" y="-180"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="353" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;切换特权级&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;进入内核态调度器(1)&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="1059.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="354" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" target="353" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1140" y="860.5" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="355" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="356" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1140" y="1059.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="356" value="回收调度器栈" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="979" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="357" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="359" target="356" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="358" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="359" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1140" y="1059.5" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1220" y="900.5"/>
+                            <mxPoint x="1220" y="1039.5"/>
+                            <mxPoint x="1140" y="1039.5"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="359" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器使用的栈类型&lt;/span&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="860" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="360" value="非空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1220" y="940" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="361" value="空栈" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="940" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="362" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="363" target="359" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="363" value="更新当前调度器变量" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1080" y="780" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="388" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="379" target="380">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="379" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;切换到目标地址空间&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;（不切换优先级）&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="860" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="404" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="380" target="400">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="380" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;在进程调度器中选择&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;优先级最高任务&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="1059.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="405" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="381" target="401">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="381" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;在进程调度器中选择&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;优先级最高任务&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="1059.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="403" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="382" target="399">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="382" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;在内核调度器中选择&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;优先级最高任务&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="1059.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="393" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="389" target="390">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="394" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="436" target="391">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="389" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;根据当前调度器&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;变量的值分支&lt;/font&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="700" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="395" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="390" target="392">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="390" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;切换到目标地址空间&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;（不切换优先级）&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="780" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="397" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="391" target="396">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="391" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;在内核调度器中选择&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;优先级最高任务&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="1059.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="402" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="392" target="398">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="392" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;在进程调度器中选择&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;优先级最高任务&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="1059.5" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="412" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="396">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="1259.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="396" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="1140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="414" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="398" target="42">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="420" y="1210"/>
+                            <mxPoint x="530" y="1210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="398" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="360" y="1140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="413" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="399">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="130" y="1259.5" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="399" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="1140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="416" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="400" target="42">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="780" y="1210"/>
+                            <mxPoint x="530" y="1210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="400" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="720" y="1140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="417" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="401" target="84">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="401" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                    <mxGeometry x="920" y="1140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="409" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;内核态运行&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;用户态任务&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="770" y="1250" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="411" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;内核态运行&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;内核态任务&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="1250" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="420" value="用户态选取下一任务" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1160" y="610" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="422" value="内核态选取下一任务" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="740" y="610" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="424" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;用户态调度器陷入内核后&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;选取下一任务&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="350" y="690" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="427" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="12" target="428">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="620" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="720" y="440"/>
+                            <mxPoint x="720" y="570"/>
+                        </Array>
+                        <mxPoint x="680" y="440" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="428" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" vertex="1" parent="1">
+                    <mxGeometry x="610" y="570" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="435" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="333" target="434">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="780" as="sourcePoint"/>
+                        <mxPoint x="620" y="1060" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="434" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;切换到目标地址空间&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;（不切换优先级）&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="820" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="437" value="" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="389" target="436">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="260" y="780" as="sourcePoint"/>
+                        <mxPoint x="260" y="1060" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="436" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;切换到目标地址空间&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;（不切换优先级）&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="200" y="820" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="438" value="进程调度器" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="710" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="439" value="内核调度器" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="780" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="440" value="当前＜全局" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="710" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="441" value="当前≥全局" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="620" y="780" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="442" value="当前＜全局" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="1040" y="710" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="443" value="当前≥全局" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="980" y="780" width="70" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
