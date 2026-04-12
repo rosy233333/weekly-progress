@@ -26,6 +26,8 @@ repo sync
 
 因此，进入内核时，先进入seL4定义的trap向量，保存上下文后跳转到reL4定义的处理函数。
 
+进入内核后的上下文保存：在单核情况下，将t0与sscratch交换；在多核情况下，将sp与sscratch交换（sscratch保存内核栈），再将t0存储于(-2\*REGBYTES)(sp)，加载(-1\*REGBYTES)(sp)到t0。之后将上下文保存于t0指向的地址，将sscratch恢复为sp（内核栈指针）。对比返回用户态的代码可知，单核情况下，用户任务的上下文指针存于sscratch中；多核情况下，用户任务的上下文指针存于(-1\*REGBYTES)(sp)处。该方式成立的条件为所有任务切换都需要进内核，因此进内核时的当前任务就是上一次出内核时的当前任务，因此任务的上下文指针有效。
+
 离开内核：在`c_handle_*`函数中调用`rel4_kernel/src/arch/riscv/c_traps.rs`的`restore_user_context`函数，获取当前线程上下文并返回。
 
 多核情况下有一个内核锁，除了处理`INTERRUPT_IPI_0`（`irq_remote_call_ipi`）中断（这是什么？为什么要例外？）以外都需要申请内核锁（`clh_lock_acquire`），使得同一时间只有一个核心能进入内核。
