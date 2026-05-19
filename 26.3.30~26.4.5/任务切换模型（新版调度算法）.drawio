@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" scale="2" border="10">
     <diagram id="t8-jY1y_tRn9Pswik4kB" name="第 1 页">
-        <mxGraphModel dx="846" dy="1768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="846" dy="1481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -637,7 +637,7 @@
                         <mxPoint x="130" y="1259.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="396" value="更新当前任务、&lt;div&gt;状态设置为运行&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="396" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="200" y="1140" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="414" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="398" target="42" edge="1">
@@ -648,7 +648,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="398" value="更新当前任务&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;、&lt;/span&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;状态设置为运行&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                <mxCell id="398" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
                     <mxGeometry x="360" y="1140" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="413" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="399" edge="1">
@@ -656,7 +656,7 @@
                         <mxPoint x="130" y="1259.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="399" value="更新当前任务&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;、&lt;/span&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;状态设置为运行&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="399" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="560" y="1140" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="416" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="400" target="42" edge="1">
@@ -667,7 +667,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="400" value="更新当前任务&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;、&lt;/span&gt;&lt;div style=&quot;color: rgb(63, 63, 63); scrollbar-color: rgb(226, 226, 226) rgb(251, 251, 251);&quot;&gt;状态设置为运行&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                <mxCell id="400" value="更新当前任务" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
                     <mxGeometry x="720" y="1140" width="120" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="417" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="401" target="84" edge="1">
@@ -877,10 +877,10 @@
                 <mxCell id="506" value="2" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="280" y="-90" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="508" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="507" target="74">
+                <mxCell id="508" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="507" target="74" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="507" value="修改任务状态" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="507" value="修改任务状态" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="670" y="1620" width="120" height="40" as="geometry"/>
                 </mxCell>
             </root>
