@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e">
+<mxfile host="65bd71144e" scale="2" border="10">
     <diagram id="NOIZdaHsacUafnvaJeis" name="第 1 页">
         <mxGraphModel dx="606" dy="340" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
@@ -152,73 +152,73 @@
                 <mxCell id="58" value="4. 分配、复用、回收栈" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="439" y="299" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" vertex="1" parent="1">
+                <mxCell id="61" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="314" y="279" width="20" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="65" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" vertex="1" parent="1">
+                <mxCell id="65" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="344" y="331" width="20" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="66" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" vertex="1" parent="1">
+                <mxCell id="66" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="406" y="329" width="20" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" vertex="1" parent="1">
+                <mxCell id="68" value="" style="shape=waypoint;sketch=0;fillStyle=solid;size=6;pointerEvents=1;points=[];fillColor=#d5e8d4;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;strokeColor=#82b366;" parent="1" vertex="1">
                     <mxGeometry x="420" y="318" width="20" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+                <mxCell id="70" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="443" y="289" as="sourcePoint"/>
                         <mxPoint x="460" y="287" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="71" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="71" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="594" y="321" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="72" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="504" y="349" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="73" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="73" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="314" y="389" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="74" value="使用" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="244" y="281" width="40" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="77" value="调度器实现、OS使用的接口" style="strokeColor=#b85450;fillColor=#f8cecc;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="77" value="调度器实现、OS使用的接口" style="strokeColor=#b85450;fillColor=#f8cecc;rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="74" y="600" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="78" value="OS实现、调度器使用的接口" style="strokeColor=#6c8ebf;fillColor=#dae8fc;rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="78" value="OS实现、调度器使用的接口" style="strokeColor=#6c8ebf;fillColor=#dae8fc;rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="74" y="660" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="79" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器中的&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;私有数据结构&lt;/font&gt;&lt;/div&gt;" style="strokeColor=#9673a6;fillColor=#F0F0F0;rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" vertex="1" parent="1">
+                <mxCell id="79" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器中的&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;私有数据结构&lt;/font&gt;&lt;/div&gt;" style="strokeColor=#9673a6;fillColor=#F0F0F0;rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;" parent="1" vertex="1">
                     <mxGeometry x="74" y="720" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器中的&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;共享数据结构&lt;/font&gt;&lt;/div&gt;" style="strokeColor=#d79b00;fillColor=#ffe6cc;rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" vertex="1" parent="1">
+                <mxCell id="80" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;调度器中的&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;共享数据结构&lt;/font&gt;&lt;/div&gt;" style="strokeColor=#d79b00;fillColor=#ffe6cc;rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;" parent="1" vertex="1">
                     <mxGeometry x="74" y="780" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="81" value="" style="endArrow=classic;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+                <mxCell id="81" value="" style="endArrow=classic;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="240" y="620" as="sourcePoint"/>
                         <mxPoint x="280" y="620" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="82" value="控制流" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="82" value="控制流" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="289" y="605" width="61" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" value="" style="endArrow=classic;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;" edge="1" parent="1">
+                <mxCell id="83" value="" style="endArrow=classic;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;dashed=1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="240" y="679.5" as="sourcePoint"/>
                         <mxPoint x="280" y="679.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="84" value="实现接口" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="84" value="实现接口" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="294" y="665" width="66" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="85" value="" style="endArrow=classic;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;dashPattern=1 1;" edge="1" parent="1">
+                <mxCell id="85" value="" style="endArrow=classic;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;dashed=1;dashPattern=1 1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="240" y="739.5" as="sourcePoint"/>
                         <mxPoint x="280" y="739.5" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="86" value="使用接口/数据结构" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="86" value="使用接口/数据结构" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="301" y="725" width="109" height="30" as="geometry"/>
                 </mxCell>
             </root>
