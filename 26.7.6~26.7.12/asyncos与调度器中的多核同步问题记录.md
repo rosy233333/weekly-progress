@@ -20,18 +20,6 @@ AsyncOS中的Mutex似乎不会在获取锁时关中断。在一般的中断处�
 
 解决问题的版本：[async-os 5883459](https://github.com/rosy233333/async-os/commit/5883459a6159579eda3fe96d4cee4f9b13f64e1d)
 
-### 3. 不知何种原因导致的发生中断时的错误，进入中断向量时scause正确，但在处理该中断时提示scause非法（还未解决）
-
-并且，在测试过程中还出现了非常难以置信的现象：在我修改了代码中的某个测试输出后，打印的结果居然一部分是修改前的格式，一部分是修改后的格式？？
-
-![alt text](image-1.png)
-
-![alt text](image.png)
-
-（热升级了属于是）
-
-出现问题的版本：[async-os 5883459](https://github.com/rosy233333/async-os/commit/5883459a6159579eda3fe96d4cee4f9b13f64e1d)、[vsched2 06a876b](https://github.com/rosy233333/vsched2/commit/06a876bf61a172a8e740eceeb1b1a95c7ae7da1d)
-
 ## 调度器中的问题
 
 ### 1. 调度器多次获取任务状态，而任务状态在期间改变，导致了与预期不一致的行为
@@ -49,3 +37,29 @@ AsyncOS中的Mutex似乎不会在获取锁时关中断。在一般的中断处�
 ### 3. 之前未考虑到，需要操作各种队列的api在进入时也需要关中断（还未解决）
 
 因为进入调度器后会获取锁，因此需要关中断。
+
+### 4. 发生中断时的错误，进入中断向量时scause正确，但在处理该中断时提示scause非法
+
+并且，在测试过程中还出现了非常难以置信的现象：在我修改了代码中的某个测试输出后，打印的结果居然一部分是修改前的格式，一部分是修改后的格式？？
+
+![alt text](image-1.png)
+
+![alt text](image.png)
+
+（热升级了属于是）
+
+出现问题的版本：[async-os 5883459](https://github.com/rosy233333/async-os/commit/5883459a6159579eda3fe96d4cee4f9b13f64e1d)、[vsched2 06a876b](https://github.com/rosy233333/vsched2/commit/06a876bf61a172a8e740eceeb1b1a95c7ae7da1d)
+
+上述神奇的bug可以通过清理编译产物再重新编译解决。
+
+清理后仍会报错，且报错常发生在多个核同时发生中断的时机。该错误还有另一种表现形式，是在取出任务trapframe时因没有trapframe而报错。
+
+之后查明了原因：在调度器的中断向量中存在三个操作：set_state、push_prev_task和push_trap。原本的设计中，三个操作的顺序为set_state --> push_prev_task --> push_trap。
+
+实际上，在异常/系统调用处理时，应沿用上述的顺序。而中断处理时，顺序应改为push_trap --> set_state --> push_prev_task。修改顺序的目的是始终保证将“执行后任务即可能运行”的操作放在最后，从而避免其它操作修改任务状态/上下文时，因为任务已经重新运行了而导致状态不正确。详见[此处注释](https://github.com/rosy233333/vsched2/blob/56be66983f977b5d19c1cdbd81befc56c1c3522f/src/main_loop.rs#L82)。
+
+解决问题的版本：[async-os 29b45c6](https://github.com/rosy233333/async-os/commit/29b45c655ad462b126758b590f6f6ed381c776cd)、[vsched2 56be669](https://github.com/rosy233333/vsched2/commit/56be66983f977b5d19c1cdbd81befc56c1c3522f)
+
+### 5. state=Blocking相关的同步问题（还未解决）
+
+调度器从thread_entry进入后，会检测若任务状态为Blocking，则修改为Blocked。但该过程不是原子操作，因此可能其它核心唤醒该任务时，状态检测和修改在调度器检测Blocking和调度器修改Blocked之间，导致唤醒时设置的Ready被覆盖为Blocked，任务无法被唤醒。
