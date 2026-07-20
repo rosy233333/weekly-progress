@@ -60,6 +60,18 @@ AsyncOS中的Mutex似乎不会在获取锁时关中断。在一般的中断处�
 
 解决问题的版本：[async-os 29b45c6](https://github.com/rosy233333/async-os/commit/29b45c655ad462b126758b590f6f6ed381c776cd)、[vsched2 56be669](https://github.com/rosy233333/vsched2/commit/56be66983f977b5d19c1cdbd81befc56c1c3522f)
 
-### 5. state=Blocking相关的同步问题（还未解决）
+### 5. state=Blocking相关的同步问题
 
 调度器从thread_entry进入后，会检测若任务状态为Blocking，则修改为Blocked。但该过程不是原子操作，因此可能其它核心唤醒该任务时，状态检测和修改在调度器检测Blocking和调度器修改Blocked之间，导致唤醒时设置的Ready被覆盖为Blocked，任务无法被唤醒。
+
+因此，修改了任务状态相关接口，新增了match_set_state接口，原子地根据任务当前的状态，修改任务状态为参数中的对应值，并返回任务的旧状态。这样可以把上述的检测-修改过程变为原子操作，从而解决该问题。
+
+此外，还在async-os中调整了关中断与设置任务状态的时机，保证设置任务状态为Ready/Exited/Blocking时都处于关中断环境下，避免设置任务状态后任务被中断，恢复后任务状态即重设为Running导致的问题。
+
+解决问题的版本：[vsched2 09ce92b](https://github.com/rosy233333/vsched2/commit/09ce92b36640cd9b4989fcd2ef812e3025b4606f)、[async-os 6169ecb](https://github.com/rosy233333/async-os/commit/6169ecbd580ab321832158734ddca6b9c8898d22)
+
+### 6. trap_handler cannot use thread api to do task switch（还未解决）
+
+根据之前的经验，出现这样的上下文问题多是出现异常导致。的确是这样，出现了sepc=0的InstructionPageFault。
+
+可能是因为trap_handler独特的唤醒方式导致的？
