@@ -63,3 +63,8 @@ trap_handler如果处理完了所有的trap，则阻塞在trap_wait_queue的阻�
 - trap_handler修改：trap处理完成后，增加将自己阻塞在对应CPU的阻塞队列上的代码。
 
 在修改过程中，应该可以保证不动interface和api？
+
+## 7.27讨论结果
+
+- trap_handler若看作中断前半段，则不应阻塞。
+- 进程调度的实现，使用per-cpu的优先级是否过于复杂？如果使用“全局优先级+cpu亲和性”呢？
