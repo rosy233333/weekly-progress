@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" scale="2" border="10">
     <diagram id="7n93J42kasZ5SMGhaIL_" name="第 1 页">
-        <mxGraphModel dx="745" dy="1768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="846" dy="1768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -11,7 +11,7 @@
                     <mxGeometry x="780" y="220" width="320" height="320" as="geometry"/>
                 </mxCell>
                 <mxCell id="404" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;" parent="1" vertex="1">
-                    <mxGeometry x="790" y="310" width="300" height="140" as="geometry"/>
+                    <mxGeometry x="790" y="310" width="140" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="440" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
                     <mxGeometry x="1340" y="60" width="160" height="400" as="geometry"/>
@@ -508,23 +508,32 @@
                 <mxCell id="514" value="&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;改变队列信号量的规则：&lt;/font&gt;&lt;div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; - 若取消阻塞条件后可以唤醒一个任务，无论其在之前或之后到来（如互斥锁的情景），则将该数+1。&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; - 若取消阻塞条件后可以唤醒所有任务，但不包括之后到来的任务，则将该数设为0。&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; - 若取消阻塞条件后可以唤醒所有任务，包括之后到来的所有任务（如被join的任务退出），则将该数设为正无穷。&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="430" y="1000" width="640" height="70" as="geometry"/>
                 </mxCell>
-                <mxCell id="518" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="517" target="402">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="517" value="action" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="517" value="action" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="800" y="320" width="120" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="519" value="JustBlock" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="519" value="JustBlock" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="800" y="360" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="520" value="Yield（对应协程在这之前被唤醒的情况）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="520" value="Yield（对应协程在这之前被唤醒的情况）" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="920" y="310" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="521" value="&amp;gt;0" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="521" value="&amp;gt;0" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="440" y="440" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="522" value="&amp;lt;=0" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                <mxCell id="522" value="&amp;lt;=0" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="570" y="390" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="524" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="517" target="523">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="920" y="340" as="sourcePoint"/>
+                        <mxPoint x="1020" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="525" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="523" target="402">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="523" value="state = Ready" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="960" y="400" width="120" height="40" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
